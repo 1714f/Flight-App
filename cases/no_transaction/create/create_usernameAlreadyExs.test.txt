@@ -1,0 +1,13 @@
+# Verify that a user cannot create an account with an already existed username.
+
+# commands to execute:
+create user1 user1 10
+create uSer1 user1 0
+quit
+*
+
+# expected output from those commands:
+Created user user1
+Failed to create user
+Goodbye
+*

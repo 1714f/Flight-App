@@ -1,0 +1,11 @@
+# Verify that invalid argument will lead to search failure
+
+# commands to execute:
+search "Seattle WA" "Boston MA" 0 -1 10
+quit
+*
+
+# expected output:
+Failed to search
+Goodbye
+*

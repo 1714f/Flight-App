@@ -1,0 +1,13 @@
+# Verify that a user cannot log in with the wrong username.
+
+# commands to execute:
+create user1 user1 100
+login user2 user1
+quit
+*
+
+# expected output:
+Created user user1
+Login failed
+Goodbye
+*

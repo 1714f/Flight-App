@@ -1,0 +1,11 @@
+# Verify that a user cannot create an account with negative balance.
+
+# commands to execute:
+create user1 user1 -10
+quit
+*
+
+# expected output from those commands:
+Failed to create user
+Goodbye
+*

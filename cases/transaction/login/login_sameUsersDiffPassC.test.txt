@@ -1,0 +1,36 @@
+# Create two users with same username but different password,
+# then try to login in two different sessions. Only one login succeeds.
+
+# commands:
+create user mypassword 100
+login user mypassword
+quit
+*
+
+# expected output:
+Created user user
+Logged in as user
+Goodbye
+|
+Failed to create user
+Login failed
+Goodbye
+*
+
+##################### Terminal #2: #####################
+
+# commands:
+create user yourpassword 100
+login user yourpassword
+quit
+*
+
+# expected output:
+Failed to create user
+Login failed
+Goodbye
+|
+Created user user
+Logged in as user
+Goodbye
+*
